@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "version": "0.9.32",
+  "name": "РуТрекер — неофициальный плагин",
+  "short_name": "РуТрекер",
+  "description": "Неофициальная сборка плагина РуТрекер для браузеров на Chromium: доступ к RuTracker.org через прокси, работа с зеркалами и поиск по трекеру в контекстном меню. Не связана с администрацией трекера.",
+  "minimum_chrome_version": "116",
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "icons": {
+    "128": "images/addon-128.png"
+  },
+  "action": {
+    "default_icon": "images/addon-128.png",
+    "default_title": "РуТрекер (неофициальный плагин)",
+    "default_popup": "pages/popup.html"
+  },
+  "options_ui": {
+    "page": "pages/options.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["pages/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "declarativeNetRequestWithHostAccess",
+    "proxy",
+    "storage",
+    "tabs",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
